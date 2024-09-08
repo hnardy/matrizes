@@ -1,4 +1,17 @@
-
+#5. Mini Projeto: Sistema de Reservas para um Pequeno Cinema
+#Descrição:
+#Um pequeno cinema possui várias salas e cada sala tem um número determinado de assentos.
+# Vamos criar um sistema simples onde os clientes podem escolher uma sala e um assento, e o sistema registra a reserva.
+#Estrutura:
+#1. A matriz representará as salas e assentos. Se uma sala tiver 5 assentos, uma matriz 1x5 será criada, e assim por diante.
+#Uma sala com 20 assentos poderia ser representada como uma matriz 4x5.
+#2. Uma célula da matriz com valor 0 indica que o assento está disponível. Se tiver valor 1, o assento está reservado.
+#Funcionalidades:
+#1. Exibir as salas e assentos com seus respectivos estados (reservado ou disponível).
+#2. Permitir a reserva de um assento em uma sala.
+#3. Cancelar a reserva de um assento.
+#4. Mostrar a taxa de ocupação de cada sala.
+#
 
 
 class Cinema:
