@@ -24,6 +24,7 @@ def imprime_matriz(m):
             print(f"| {m[i][j]} |", end="")
         print("")
 
+
 def somar_matriz(m):
     # considerando que a matriz será sempre quadrada
     tam = len(m)
