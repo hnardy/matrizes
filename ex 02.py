@@ -1,5 +1,6 @@
-#ex01
-#Leia uma matriz 3x3 e calcule a soma de todos os seus elementos.
+# ex 02
+#Leia uma matriz 3x3 e imprima sua diagonal principal.
+
 
 from random import randint
 
@@ -24,19 +25,20 @@ def imprime_matriz(m):
             print(f"| {m[i][j]} |", end="")
         print("")
 
-def somar_matriz(m):
-    # considerando que a matriz será sempre quadrada
+
+
+def imprime_diag_principal(m):
+    #considerando que a matriz será sempre quadrada
+
     tam = len(m)
-    soma = 0
+    principal = list()
     for i in range(tam):
         for j in range(tam):
-            soma+= m[i][j]
-    return soma
-
+            if i == j:
+                principal.append(m[i][j])
+    print(f'matriz principal:{principal}')
 
 
 mat = gerar_matriz_aleatoria()
-soma = somar_matriz(mat)
 imprime_matriz(mat)
-print(f"valor da soma {soma}")
-
+imprime_diag_principal(mat)
