@@ -21,7 +21,7 @@ def gerar_tabela(quanti_produtos= 3, messes= 12):
     m = [[0 for j in range(quanti_produtos)] for i in range(messes)]
 
     for j in range(0,quanti_produtos):
-        for i in range(0,12):
+        for i in range(0,messes):
             m[i][j] = randint(0,10)
 
     return m
@@ -48,16 +48,16 @@ def vendas_totais_por_produto(m):
     somador= 0
 
     print("vendas totais por produto")
-    for j in range(0,linhas):
-        print(f'produto: {j + 1}', end="")
-        for i in range(0,colunas):
-          somador += m[][]
+
+    for i in range(linhas):
+        print(f"produto {i+1}:", end="")
+        for j in range(colunas):
+            somador += m[i][j]
         print(somador)
         somador = 0
 
 
-
-matriz = gerar_tabela(3,12)
+matriz = gerar_tabela(3,3)
 print("tabela ")
 imprimir_tabela(matriz)
 vendas_totais_por_produto(matriz)
