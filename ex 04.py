@@ -41,9 +41,27 @@ def imprimir_tabela(m):
         print("")
 
 
+def vendas_totais_por_produto(m):
+    # considerando que a matriz sempre será retangular
+    colunas = len(m)
+    linhas = len(m[0])
+    somador= 0
+
+    print("vendas totais por produto")
+    for j in range(0,linhas):
+        print(f'produto: {j + 1}', end="")
+        for i in range(0,colunas):
+          somador += m[][]
+        print(somador)
+        somador = 0
+
+
+
 matriz = gerar_tabela(3,12)
-print("tabela")
+print("tabela ")
 imprimir_tabela(matriz)
+vendas_totais_por_produto(matriz)
+
 
 
 
