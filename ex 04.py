@@ -32,9 +32,9 @@ def imprimir_tabela(m):
     colunas = len(m)
     linhas =len(m[0])
 
-    print("            jan   fev   mar   abr   mai   jun   jul   ago   set   out   nov   dez")
+    print("                 jan   fev   mar   abr   mai   jun   jul   ago   set   out   nov   dez")
     for j in range(0,linhas):
-        print(f'produto: {j+1}', end= "")
+        print(f'produto {j+1}:     ', end= "")
         for i in range(0,colunas):
 
             print( f" | {m[i][j]} |", end= "")
@@ -49,19 +49,62 @@ def vendas_totais_por_produto(m):
 
     print("vendas totais por produto")
 
-    for i in range(linhas):
-        print(f"produto {i+1}:", end="")
-        for j in range(colunas):
+    for i in range(colunas):
+        for j in range(linhas):
+            somador += m[j][i]
+        print(f'produto{i + 1}: {somador} ')
+        somador = 0
+
+
+def vendas_totais_por_mes(m):
+    # considerando que a matriz sempre será retangular
+    colunas = len(m)
+    linhas = len(m[0])
+    somador= 0
+
+    print("vendas totais por mês")
+
+    for i in range(colunas):
+        print(f'mes {i+1}: ',end="")
+        for j in range(linhas):
             somador += m[i][j]
+
         print(somador)
         somador = 0
 
 
+def media_mensal_produto(m):
+    #considerando sempre como uma matriz quadrada
+    colunas = len(m)
+    linhas = len(m[0])
+    somador = 0
+
+    print("vendas totais por produto")
+
+    for i in range(colunas):
+        for j in range(linhas):
+            somador += m[j][i]
+
+        somador = (somador/colunas)
+        print(f'produto{i + 1}: {somador} ')
+        somador = 0
+
+
+
+
+
+
+
 matriz = gerar_tabela(3,3)
 print("tabela ")
-imprimir_tabela(matriz)
-vendas_totais_por_produto(matriz)
 
+imprimir_tabela(matriz)
+print("")
+vendas_totais_por_produto(matriz)
+print("")
+vendas_totais_por_mes(matriz)
+print("")
+media_mensal_produto(matriz)
 
 
 
